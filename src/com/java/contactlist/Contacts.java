@@ -2,19 +2,22 @@ package com.java.contactlist;
 
 public class Contacts {
     private String name;
-    private int mobileNumber;
+    private String phoneNumber;
 
-    public Contacts(String name, int mobileNumber) {
+    public Contacts(String name, String phoneNumber) {
         this.name = name;
-        this.mobileNumber = mobileNumber;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getMobileNumber() {
-        return mobileNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
+    public static Contacts createContact(String name, String phoneNumber) {
+        return new Contacts(name, phoneNumber);
+    }
 }
